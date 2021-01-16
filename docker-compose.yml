@@ -1,0 +1,20 @@
+# custom app config
+# overrides DCAPE/apps/drone/dcape-app/docker-compose.yml
+
+version: '2'
+
+services:
+  app:
+    environment:
+      - EXT_DB=True
+      - DB_USER=${PGUSER}
+      - DB_NAME=${PGDATABASE}
+      - DB_PASS=${PGPASSWORD}
+      - DB_HOST=db
+      - SOPDS_SU_NAME=${USER_NAME}
+      - SOPDS_SU_EMAIL=${USER_EMAIL}
+      - SOPDS_SU_PASS=${USER_PASS}
+    volumes:
+      - ${DCAPE_ROOT}/Library:/library:ro
+      - ${APP_ROOT}/start.sh:/start.sh:ro
+      - ${APP_ROOT}/genre.sql:/genre.sql
