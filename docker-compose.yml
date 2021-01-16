@@ -15,6 +15,6 @@ services:
       - SOPDS_SU_EMAIL=${USER_EMAIL}
       - SOPDS_SU_PASS=${USER_PASS}
     volumes:
-      - ${DCAPE_ROOT}/Library:/library:ro
+      - ${DCAPE_ROOT}/${LIB_PATH}:/library:ro
       - ${APP_ROOT}/start.sh:/start.sh:ro
       - ${APP_ROOT}/genre.sql:/genre.sql
