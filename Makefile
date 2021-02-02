@@ -19,9 +19,10 @@ ADD_USER ?= yes
 # ------------------------------------------------------------------------------
 # app custom config
 
-LIB_PATH     ?= Library
-
 PERSIST_FILES = start.sh genre.sql
+
+LIB_PATH     ?= Library
+DCAPE_ROOT   ?= /opt/dcape/var
 
 # ------------------------------------------------------------------------------
 # .env template (custom part)
@@ -34,11 +35,14 @@ define CONFIG_CUSTOM
 # Relative path to library sources from DCAPE/var
 LIB_PATH=$(LIB_PATH)
 
+# Path to /opt/dcape/var. Used only outside drone
+#DCAPE_ROOT=$(DCAPE_ROOT)
+
 endef
 
 # ------------------------------------------------------------------------------
 # Find and include DCAPE/apps/drone/dcape-app/Makefile
-DCAPE_COMPOSE  ?= dcape-compose
+DCAPE_COMPOSE   ?= dcape-compose
 DCAPE_MAKEFILE  ?= $(shell docker inspect -f "{{.Config.Labels.dcape_app_makefile}}" $(DCAPE_COMPOSE))
 ifeq ($(shell test -e $(DCAPE_MAKEFILE) && echo -n yes),yes)
   include $(DCAPE_MAKEFILE)
