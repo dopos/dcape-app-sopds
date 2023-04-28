@@ -54,5 +54,9 @@ endif
 ## Custom app targets
 #:
 
+## Rescan library
+rescan: CMD=run app python3 manage.py sopds_scanner scan --verbose
+rescan: dc
+
 
 # ...
