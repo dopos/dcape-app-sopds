@@ -18,6 +18,9 @@ IMAGE_VER          ?= 0.47
 # ------------------------------------------------------------------------------
 # app custom config
 
+#- app root
+APP_ROOT           ?= $(PWD)
+
 # If you need database, uncomment this var
 USE_DB              = yes
 
