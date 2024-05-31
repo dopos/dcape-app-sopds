@@ -18,7 +18,7 @@
 
 This project contains
 
-* reference versions of core files for all of **dcape** applications since **dcape** v2:
+* reference versions of core files for all of **dcape** applications since **dcape** v3:
   * [Makefile](Makefile)
   * [.drone.yml](.drone.yml)
   * [docker-compose.yml](docker-compose.yml)
@@ -32,7 +32,7 @@ This project contains
 
 * linux 64bit (git, make, sed)
 * [docker](http://docker.io)
-* [dcape](https://github.com/dopos/dcape) v2
+* [dcape](https://github.com/dopos/dcape) v3
 * Git service ([github](https://github.com), [gitea](https://gitea.io) or [gogs](https://gogs.io))
 
 ## Install
