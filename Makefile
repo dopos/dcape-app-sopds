@@ -32,6 +32,8 @@ ADD_USER            = yes
 
 PERSIST_FILES = start.sh genre.sql
 
+#- Database host
+PGHOST             ?= db
 #- Relative path to library sources from DCAPE/var
 LIB_PATH           ?= Library
 

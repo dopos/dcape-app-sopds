@@ -10,7 +10,7 @@ services:
       - DB_USER=${PGUSER}
       - DB_NAME=${PGDATABASE}
       - DB_PASS=${PGPASSWORD}
-      - DB_HOST=db
+      - DB_HOST=${PGHOST}
       - SOPDS_SU_NAME=${USER_NAME}
       - SOPDS_SU_EMAIL=${USER_EMAIL}
       - SOPDS_SU_PASS=${USER_PASS}
